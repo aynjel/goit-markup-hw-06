@@ -379,13 +379,17 @@
                         Subscribe
                     </h3>
                     <form action="#" class="footer-form">
-                        <input type="email" placeholder="E-mail" />
-                        <button type="submit">
-                            Subscribe
-                            <svg width="24" height="24">
-                                <use href="images/svg/icons.svg#paper-plane"></use>
-                            </svg>
-                        </button>
+                        <div class="footer-form-group">
+                            <input type="email" placeholder="E-mail" />
+                        </div>
+                        <div class="footer-form-group">
+                            <button type="submit">
+                                Subscribe
+                                <svg width="24" height="24">
+                                    <use href="images/svg/icons.svg#paper-plane"></use>
+                                </svg>
+                            </button>
+                        </div>
                     </form>
                 </li>
                 <!-- <li class="footer-list-item"></li> -->
@@ -400,6 +404,51 @@
                     <use href="./images/svg/icons.svg#cross"></use>
                 </svg>
             </button>
+            <div class="modal-header">
+                <h3>Leave your contacts and we will call you back</h3>
+            </div>
+            <div class="modal-body">
+                <form class="modal-form" method="POST" autocomplete="off" action="#">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <div class="form-group-input">
+                            <svg width="16" height="16">
+                                <use href="./images/svg/icons.svg#user"></use>
+                            </svg>
+                            <input type="text" id="name" name="name" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <div class="form-group-input">
+                            <svg width="16" height="16">
+                                <use href="./images/svg/icons.svg#phone"></use>
+                            </svg>
+                            <input type="tel" id="phone" name="phone" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="form-group-input">
+                            <svg width="16" height="16">
+                                <use href="./images/svg/icons.svg#email"></use>
+                            </svg>
+                            <input type="text" id="email" name="email" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Comment</label>
+                        <textarea id="comment" name="comment" placeholder="Text input"></textarea>
+                    </div>
+                    <div class="form-group-agree">
+                        <input type="checkbox" id="agree" name="agree" />
+                        <label for="agree">I accept the terms and conditions of the <a href="#">Privacy Policy</a></label>
+                    </div>
+                    <div class="submit-btn">
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 

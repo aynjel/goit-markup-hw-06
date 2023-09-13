@@ -112,7 +112,7 @@ img{
 .nav-lists li::after{
     content: "";
     position: absolute;
-    bottom: -19px;
+    bottom: -17px;
     left: 0;
     width: 0%;
     height: 4px;
@@ -176,6 +176,7 @@ main {
 }
 
 .hero-container h1 {
+    font-family: "Roboto", sans-serif;
     font-size: 56px;
     font-style: normal;
     font-weight: 700;
@@ -261,6 +262,8 @@ main {
 }
 
 .services-container h2{
+    font-family: "Roboto",
+    sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -295,6 +298,8 @@ main {
 }
 
 .teams-container h2{
+    font-family: "Roboto",
+    sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -402,6 +407,8 @@ main {
 }
 
 .customers-container h2{
+    font-family: "Roboto",
+    sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -647,10 +654,6 @@ main {
 }
 
 .footer-social-item a:hover{
-    background: var(--ocean);
-}
-
-.footer-social-item a:active{
     background: var(--green);
 }
 
@@ -660,9 +663,6 @@ main {
 
 .footer-form{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     gap: 16px;
 }
 
@@ -735,20 +735,19 @@ main {
 }
 
 .modal-content{
-    width: 408px;
-    height: 584px;
+    width: 440px;
     max-height: 100%;
     margin: 0 30px;
     background: var(--white);
     border-radius: 4px;
-    padding: 40px;
+    padding: 40px 24px;
     position: relative;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     transform: none;
     transition: transform var(--transition-duration) var(--animation-timing-function);
 }
 
-.modal-close{
+.modal-close {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -762,18 +761,151 @@ main {
     align-items: center;
     background: var(--cornflower);
     border: 1px solid rgba(0, 0, 0, 0.10);
+    transition: background-color var(--transition-duration) var(--animation-timing-function), color var(--transition-duration) var(--animation-timing-function);
 }
 
-.modal-close:hover{
-    background: var(--cloud);
+.modal-close:hover {
+    background-color: var(--ocean);
+    color: var(--white);
 }
 
-.modal-close svg{
-    fill: var(--navyblue);
+.modal-close svg {
+    fill: currentColor;
     transition: fill var(--transition-duration) var(--animation-timing-function);
 }
 
-.modal-close:hover svg{
-    fill: var(--iris);
+.modal-close:hover svg {
+    fill: var(--white);
 }
 
+.modal-header{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+.modal-header h3{
+    color: var(--navyblue);
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+}
+
+.modal-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.modal-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-group label{
+    color: var(--lightslate);
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+}
+
+.form-group .form-group-input{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--navybluemodal, rgba(46, 47, 66, 0.40));
+    padding: 8px 16px;
+}
+
+.form-group-input svg{
+    fill: var(--navyblue);
+}
+
+.form-group-input input{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--navyblue);
+    background: transparent;
+}
+
+.form-group-input:focus-within{
+    border: 1px solid var(--iris);
+}
+
+.form-group textarea{
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--navybluemodal);
+    padding: 8px 16px;
+    resize: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.form-group textarea:focus{
+    border: 1px solid var(--iris);
+}
+
+.form-group-agree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-group-agree label{
+    color: var(--lightslate);
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+}
+
+.form-group-agree input{
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1px solid var(--navybluemodal, rgba(46, 47, 66, 0.40));
+}
+
+.submit-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-btn button[type="submit"]{
+    margin: 0;
+    height: 40px;
+    border-radius: 4px;
+    padding: 8px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    background: var(--iris);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: all var(--transition-duration) var(--animation-timing-function);
+}
