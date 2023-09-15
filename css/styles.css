@@ -66,6 +66,7 @@ img{
     width: 100%;
     border-bottom: 1px solid var(--cornflower);
     background: var(--white);
+    padding: 11px 0px;
 }
 
 .header-container {
@@ -112,7 +113,7 @@ img{
 .nav-lists li::after{
     content: "";
     position: absolute;
-    bottom: -17px;
+    bottom: -28px;
     left: 0;
     width: 0%;
     height: 4px;
@@ -735,12 +736,11 @@ main {
 }
 
 .modal-content{
-    width: 440px;
+    width: 408px;
     max-height: 100%;
-    margin: 0 30px;
     background: var(--white);
     border-radius: 4px;
-    padding: 40px 24px;
+    padding: 72px 24px 24px;
     position: relative;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     transform: none;
@@ -782,7 +782,7 @@ main {
     display: flex;
     justify-content:center;
     align-items: center;
-    margin: 30px 0px;
+    margin-bottom: 16px;
 }
 
 .modal-header h3{
@@ -846,9 +846,18 @@ main {
     border: none;
     outline: none;
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     color: var(--navyblue);
     background: transparent;
+}
+
+.form-group-input svg{
+    fill: var(--lightslate);
+    transition: fill var(--transition-duration) var(--animation-timing-function);
+}
+
+.form-group-input:focus-within svg{
+    fill: var(--iris);
 }
 
 .form-group-input:focus-within{
@@ -862,7 +871,8 @@ main {
     padding: 8px 16px;
     resize: none;
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
+    outline: none;
 }
 
 .form-group textarea:focus{
@@ -882,6 +892,15 @@ main {
     font-size: 12px;
 }
 
+.form-group-agree label a{
+    color: var(--iris);
+    transition: color var(--transition-duration) var(--animation-timing-function);
+}
+
+.form-group-agree label a:hover{
+    color: var(--ocean);
+}
+
 .form-group-agree input{
     width: 16px;
     height: 16px;
@@ -890,6 +909,7 @@ main {
 }
 
 .submit-btn{
+    margin-top: 8px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -897,10 +917,10 @@ main {
 }
 
 .submit-btn button[type="submit"]{
-    margin: 0;
     height: 40px;
     border-radius: 4px;
-    padding: 8px 24px;
+    padding: 16px 32px;
+    min-width: 169px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -908,4 +928,12 @@ main {
     background: var(--iris);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     transition: all var(--transition-duration) var(--animation-timing-function);
+}
+
+.submit-btn button[type="submit"]:hover{
+    background: var(--ocean);
+}
+
+.submit-btn button[type="submit"]:active{
+    background: var(--green);
 }
