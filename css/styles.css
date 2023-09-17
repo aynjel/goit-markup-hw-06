@@ -922,6 +922,7 @@ main {
 }
 
 .form-group-agree label a{
+    text-decoration: underline;
     color: var(--iris);
     transition: color var(--transition-duration) var(--animation-timing-function);
 }
@@ -939,7 +940,6 @@ main {
 }
 
 .submit-btn button[type="submit"]{
-    height: 40px;
     border-radius: 4px;
     padding: 16px 32px;
     min-width: 169px;
